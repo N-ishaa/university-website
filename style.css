@@ -612,8 +612,8 @@ form .btn2 {
   .box1,
   .box2,
   .box3 {
-    height: 230px;
-    width: 350px;
+    height: 200px;
+    width: 100%;
     padding: 20px;
     margin-bottom: 20px;
   }
@@ -667,8 +667,8 @@ form .btn2 {
   .box4,
   .box5,
   .box6 {
-    height: 380px;
-    width: 350px;
+    height: 410px;
+    width: 100%;
     margin-bottom: 10px;
   }
 
@@ -676,7 +676,7 @@ form .btn2 {
   .box8,
   .box9 {
     height: 300px;
-    width: 350px;
+    width: 100%;
     margin-top: 20px;
   }
 
@@ -715,7 +715,7 @@ form .btn2 {
   .box10,
   .box11 {
     height: 200px;
-    width: 350px;
+    width: 100%;
   }
 
 

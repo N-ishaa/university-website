@@ -132,6 +132,32 @@ button:hover {
   background-color: whitesmoke;
   border: 2px solid transparent;
   margin: auto;
+
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+.box1:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 rgb(243, 82, 82);
+}
+
+.box2:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 rgb(243, 82, 82);
+}
+.box3:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 rgb(243, 82, 82);
+}
+
+.box1,
+.box2,
+.box3 {
+  color: rgb(243, 82, 82);
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 .boxes {
@@ -181,7 +207,8 @@ button:hover {
   background-repeat: no-repeat;
   scroll-behavior: smooth;
   margin: auto;
-
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .online-crs h1 {
@@ -202,6 +229,33 @@ button:hover {
   font-size: 2rem;
 }
 
+.online-crs::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgb(243, 82, 82)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.online-crs:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px  rgb(243, 82, 82);
+}
+
+.online-crs:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
 .university {
   display: flex;
 }
@@ -305,6 +359,7 @@ button:hover {
   width: 400px;
   margin: auto;
   border-radius: 10px;
+  transition: 1s ease;
 }
 
 .box7 {
@@ -318,6 +373,15 @@ button:hover {
 .box9 {
   background-image: url(images/college-7.jpg);
 }
+.box7:hover,
+.box8:hover,
+.box9:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: 1s ease;
+}
+
 
 .facilities h2 {
   margin-top: 150px;
@@ -352,8 +416,12 @@ button:hover {
   border: 2px solid transparent;
   margin: auto;
   margin-top: 100px;
+  transition: transform 0.3s ease-in-out;
 }
-
+.box10:hover,
+.box11:hover {
+  transform: scale(1.1); 
+}
 .icon {
   color: peru;
   font-size: 0.85rem;
@@ -401,6 +469,8 @@ button:hover {
   background-size: cover;
   background-repeat: no-repeat;
   scroll-behavior: smooth;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
 .about-us h1 {
@@ -410,24 +480,32 @@ button:hover {
   padding-top: 200px;
   font-size: 2.5rem;
 }
-
-.about-university {
-  display: flex;
-  justify-content: center;
-  margin: 100px 0;
-  gap: 50px;
-  width: 1000px;
-  height: 500px;
+.about-us::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgb(243, 82, 82)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
-.university-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.about-us:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px  rgb(243, 82, 82);
 }
 
-.university-content p {
-  font-size: 1rem;
+.about-us:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
 
 .contact-icon {
@@ -435,29 +513,22 @@ button:hover {
   margin-top: 150px;
 }
 
-.comment {
-  max-width: 600px;
-  padding: 20px;
-  background-color: white;
-  margin: 0 auto;
-  margin-top: 50px;
-  box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
-  border-radius: 10px;
+.sub-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 220px;
 }
-
-
 .Contact-Section {
-  padding: 100px 0;
+  padding: 100px 100px;
   display: flex;
-
 }
 
 .contact-left {
-  margin-left: 600px;
+  margin-left: 650px;
 }
 
 .contact-right {
-  margin-left: 300px;
+  margin-left: 400px;
 }
 
 .contact-left p {
@@ -490,12 +561,12 @@ button:hover {
 }
 
 .contact-right form {
-  width: 100%;
+  width: 80%;
 }
 
 form input,
 form textarea {
-  width: 100%;
+  width: 80%;
   border: 0;
   outline: none;
   background-color: rgb(245, 239, 239);
@@ -507,9 +578,8 @@ form textarea {
 }
 
 form .btn2 {
-  padding: 14px 60px;
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 50px;
   cursor: pointer;
 }
 
@@ -565,10 +635,6 @@ form .btn2 {
   border: none;
 }
 
-.sub-title {
-  font-size: 60px;
-  font-weight: 600;
-}
 
 .icons {
   padding: 20px;
@@ -577,7 +643,10 @@ form .btn2 {
   margin-top: 100px;
   margin-left: 45%;
 }
-
+.icons:hover{
+  font-size: 1.6rem;
+  color: red;
+}
 .footer h4 {
   margin-left: 45%;
   font-size: 1.2rem;
@@ -717,32 +786,13 @@ form .btn2 {
     height: 200px;
     width: 95%;
   }
-
-
-  .about-university {
-    display: block;
-    flex-wrap: wrap;
+  form input,
+  form textarea{
+    width: 100%;
   }
-
-  .img4 {
-    background-image: url(images/college-12.jpg);
-    height: 300px;
-    width: 420px;
-    display: block;
-  }
-
-  .university-content {
-    display: block;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .university-content p {
-    font-size: 10px;
-    width: 420px;
-    height: 50px;
-  }
-
+  .contact-right form {
+    width: 100%;
+}
   .contact-left {
     margin-left: 0px;
     margin-top: 100px;
@@ -785,10 +835,6 @@ form .btn2 {
   .img4 {
     height: 600px;
     background-image: url(images/college-11.jpg);
-  }
-
-  .about-university {
-    width: 700px;
   }
 
   .contact-left,
